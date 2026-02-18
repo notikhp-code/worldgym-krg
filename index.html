@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldGym Караганда — Фитнес-клуб</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --dark-gray: #1a1a1a;
+            --red: #e60000;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--black);
+            color: var(--white);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+        }
+
+        .logo {
+            max-width: 180px;
+            filter: drop-shadow(0 0 10px rgba(230, 0, 0, 0.5));
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .accent {
+            color: var(--red);
+        }
+
+        .address {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #bbb;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            width: 100%;
+            margin: 40px 0;
+        }
+
+        .card {
+            background: var(--dark-gray);
+            padding: 25px;
+            border-bottom: 4px solid var(--red);
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: #222;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--red);
+            text-transform: uppercase;
+            font-size: 1.4rem;
+        }
+
+        .price-tag {
+            font-size: 2.2rem;
+            font-weight: 900;
+            display: block;
+            margin-top: 10px;
+            color: var(--white);
+        }
+
+        .cta-container {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 30px 0 50px 0;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 18px 35px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: 0.3s;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
+            box-shadow: 0 4px 15px rgba(220, 39, 67, 0.3);
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        /* Стили для карты */
+        .map-section {
+            width: 100%;
+            max-width: 1100px;
+            margin: 20px auto 50px auto;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid var(--dark-gray);
+        }
+
+        .map-title {
+            text-align: center;
+            color: var(--red);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.8rem;
+            color: #555;
+            background: #050505;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            display: inline-block;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        ul li::before {
+            content: "✓";
+            color: var(--red);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .price-tag { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://worldgym.com/img/logo.png" alt="WorldGym Logo" class="logo">
+    </header>
+
+    <main class="hero">
+        <h1>WorldGym <span class="accent">Караганда</span></h1>
+        <p class="address">г. Караганда, ул. Сабита Муканова, 55Б</p>
+
+        <div class="info-grid">
+            <div class="card">
+                <h3>Абонементы</h3>
+                <p>Доступный фитнес мирового уровня</p>
+                <span class="price-tag">от 15 000 ₸</span>
+            </div>
+            
+            <div class="card">
+                <h3>Команда</h3>
+                <p>Квалифицированные тренеры, мастера спорта и профессионалы своего дела.</p>
+            </div>
+
+            <div class="card">
+                <h3>Секции</h3>
+                <p>Для взрослых и детей:</p>
+                <ul>
+                    <li>Бокс</li>
+                    <li>Борьба</li>
+                    <li>Грэпплинг</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cta-container">
+            <a href="https://wa.me/77765683838" class="btn btn-whatsapp" target="_blank">Написать в WhatsApp</a>
+            <a href="https://www.instagram.com/world.gym_fitness.club" class="btn btn-instagram" target="_blank">Наш Instagram</a>
+        </div>
+
+        <div class="map-title">Как нас найти</div>
+        <div class="map-section">
+            <div style="position:relative;overflow:hidden;">
+                <a href="https://yandex.kz/maps/164/karaganda/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Караганда</a>
+                <a href="https://yandex.kz/maps/164/karaganda/house/Y0oYdwFhTEQHQFpjfXt5dHRqYg==/?ll=73.161510%2C49.785896&utm_medium=mapframe&utm_source=maps&z=17.06" style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Сабита Муканова, 55Б — Яндекс Карты</a>
+                <iframe src="https://yandex.kz/map-widget/v1/?ll=73.161510%2C49.785896&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg2NjY1OTIxOBJC0JrQsNC30LDRm9GB0YLQsNC9LCDSmtCw0YDQsNKT0LDQvdC00LAsINCh0LDQsdC40YIg0JzSsdC60LDQvdC-0LIg0LrTqdGI0LXRgdGWLCA1NUIiCg29R9hCFXU6P0I%2C&z=17.06" width="100%" height="400" frameborder="1" allowfullscreen="true" style="position:relative; border:none;"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 WorldGym Karaganda. Сабита Муканова 55Б. Все права защищены.
+    </footer>
+
+</body>
+</html>
